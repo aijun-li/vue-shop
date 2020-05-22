@@ -274,7 +274,6 @@ export default {
           'categories',
           this.addCateForm
         )
-        console.log(res)
         if (res.meta.status !== 201) {
           return this.$message.error('添加分类失败！')
         }

@@ -244,7 +244,6 @@ export default {
     },
     // 发起删除角色信息请求
     async removeRoleById(id) {
-      console.log(this.roleList)
       try {
         await this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
           confirmButtonText: '确定',
@@ -273,7 +272,6 @@ export default {
         const { data: res } = await this.$http.delete(
           `roles/${role.id}/rights/${rightId}`
         )
-        console.log(res)
         if (res.meta.status !== 200) {
           return this.$message.error('删除权限失败！')
         }
